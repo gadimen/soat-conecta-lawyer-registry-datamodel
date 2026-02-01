@@ -1,0 +1,77 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440001",
+  "firstName": "Maria",
+  "lastName": "Silva",
+  "registrationNumber": "OAB123456",
+  "email": "maria.silva@lawfirm.com",
+  "phone": "+5511987654321",
+  "status": "active",
+  "licenseDate": "2015-03-15",
+  "specializations": [
+    {
+      "id": "spec-001",
+      "name": "Corporate Law",
+      "category": "corporate",
+      "yearsOfExperience": 8,
+      "certifiedDate": "2015-03-15"
+    },
+    {
+      "id": "spec-002",
+      "name": "Mergers and Acquisitions",
+      "category": "corporate",
+      "yearsOfExperience": 5,
+      "certifiedDate": "2018-06-20"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-001",
+      "name": "Certified Corporate Lawyer",
+      "issuingOrganization": "Brazilian Bar Association",
+      "certificationNumber": "CCL-2015-789",
+      "issueDate": "2015-03-15",
+      "expiryDate": "2025-03-15",
+      "status": "active"
+    }
+  ],
+  "lawFirm": {
+    "id": "550e8400-e29b-41d4-a716-446655440100",
+    "name": "Silva & Associates Legal",
+    "registrationNumber": "CNPJ12345678",
+    "email": "contact@silvaassociates.com",
+    "phone": "+551130001000",
+    "website": "https://www.silvaassociates.com",
+    "foundedDate": "2010-01-15",
+    "size": "medium",
+    "address": {
+      "street": "Avenida Paulista",
+      "streetNumber": "1500",
+      "apartment": "Suite 2001",
+      "city": "São Paulo",
+      "state": "SP",
+      "postalCode": "01310-100",
+      "country": "Brazil",
+      "coordinates": {
+        "latitude": -23.5629,
+        "longitude": -46.6544
+      }
+    },
+    "createdAt": "2023-01-10T10:00:00Z",
+    "updatedAt": "2026-01-15T14:30:00Z"
+  },
+  "address": {
+    "street": "Avenida Paulista",
+    "streetNumber": "1500",
+    "apartment": "Suite 2001",
+    "city": "São Paulo",
+    "state": "SP",
+    "postalCode": "01310-100",
+    "country": "Brazil",
+    "coordinates": {
+      "latitude": -23.5629,
+      "longitude": -46.6544
+    }
+  },
+  "createdAt": "2023-01-10T10:00:00Z",
+  "updatedAt": "2026-01-15T14:30:00Z"
+}

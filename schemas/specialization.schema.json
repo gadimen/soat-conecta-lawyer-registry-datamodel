@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://soat-conecta.com/schemas/specialization.schema.json",
+  "title": "Specialization",
+  "description": "Schema for a legal specialization in the SOAT Conecta Lawyer Registry",
+  "type": "object",
+  "required": ["id", "name", "category"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the specialization"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the specialization",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "category": {
+      "type": "string",
+      "description": "Category of law",
+      "enum": [
+        "criminal",
+        "civil",
+        "corporate",
+        "family",
+        "labor",
+        "tax",
+        "intellectual_property",
+        "real_estate",
+        "immigration",
+        "environmental",
+        "administrative",
+        "constitutional",
+        "international"
+      ]
+    },
+    "yearsOfExperience": {
+      "type": "integer",
+      "description": "Years of experience in this specialization",
+      "minimum": 0
+    },
+    "certifiedDate": {
+      "type": "string",
+      "description": "Date when certified in this specialization",
+      "format": "date"
+    }
+  }
+}

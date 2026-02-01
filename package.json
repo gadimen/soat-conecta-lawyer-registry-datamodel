@@ -1,0 +1,31 @@
+{
+  "name": "soat-conecta-lawyer-registry-datamodel",
+  "version": "1.0.0",
+  "description": "Data model for SOAT Conecta Lawyer Registry system",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gadimen/soat-conecta-lawyer-registry-datamodel.git"
+  },
+  "keywords": [
+    "lawyer",
+    "registry",
+    "data-model",
+    "json-schema",
+    "soat",
+    "conecta"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gadimen/soat-conecta-lawyer-registry-datamodel/issues"
+  },
+  "homepage": "https://github.com/gadimen/soat-conecta-lawyer-registry-datamodel#readme",
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^3.0.1"
+  },
+  "scripts": {
+    "validate": "node validate.js"
+  }
+}
