@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://soat-conecta.com/schemas/lawyer.schema.json",
+  "title": "Lawyer",
+  "description": "Schema for a lawyer in the SOAT Conecta Lawyer Registry",
+  "type": "object",
+  "required": ["id", "firstName", "lastName", "registrationNumber", "email", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the lawyer",
+      "pattern": "^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "firstName": {
+      "type": "string",
+      "description": "Lawyer's first name",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Lawyer's last name",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "registrationNumber": {
+      "type": "string",
+      "description": "Official bar association registration number",
+      "pattern": "^[A-Z0-9]{6,20}$"
+    },
+    "email": {
+      "type": "string",
+      "description": "Primary email address",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Primary phone number",
+      "pattern": "^\\+?[1-9]\\d{1,14}$"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the lawyer",
+      "enum": ["active", "inactive", "suspended", "retired"]
+    },
+    "licenseDate": {
+      "type": "string",
+      "description": "Date when the lawyer was licensed",
+      "format": "date"
+    },
+    "specializations": {
+      "type": "array",
+      "description": "List of legal specializations",
+      "items": {
+        "$ref": "specialization.schema.json"
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "description": "Professional certifications",
+      "items": {
+        "$ref": "certification.schema.json"
+      }
+    },
+    "lawFirm": {
+      "description": "Associated law firm",
+      "$ref": "lawfirm.schema.json"
+    },
+    "address": {
+      "description": "Primary address",
+      "$ref": "address.schema.json"
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "Timestamp when the record was created",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "Timestamp when the record was last updated",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://soat-conecta.com/schemas/certification.schema.json",
+  "title": "Certification",
+  "description": "Schema for a professional certification in the SOAT Conecta Lawyer Registry",
+  "type": "object",
+  "required": ["id", "name", "issuingOrganization", "issueDate"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the certification"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the certification",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "issuingOrganization": {
+      "type": "string",
+      "description": "Organization that issued the certification",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "certificationNumber": {
+      "type": "string",
+      "description": "Certification number or ID",
+      "maxLength": 100
+    },
+    "issueDate": {
+      "type": "string",
+      "description": "Date when the certification was issued",
+      "format": "date"
+    },
+    "expiryDate": {
+      "type": "string",
+      "description": "Date when the certification expires",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the certification",
+      "enum": ["active", "expired", "revoked", "suspended"]
+    }
+  }
+}

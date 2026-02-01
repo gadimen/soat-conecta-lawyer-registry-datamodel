@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://soat-conecta.com/schemas/address.schema.json",
+  "title": "Address",
+  "description": "Schema for an address in the SOAT Conecta Lawyer Registry",
+  "type": "object",
+  "required": ["street", "city", "country"],
+  "properties": {
+    "street": {
+      "type": "string",
+      "description": "Street address",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "streetNumber": {
+      "type": "string",
+      "description": "Street number",
+      "maxLength": 20
+    },
+    "apartment": {
+      "type": "string",
+      "description": "Apartment, suite, or unit number",
+      "maxLength": 50
+    },
+    "city": {
+      "type": "string",
+      "description": "City name",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "state": {
+      "type": "string",
+      "description": "State or province",
+      "maxLength": 100
+    },
+    "postalCode": {
+      "type": "string",
+      "description": "Postal or ZIP code",
+      "maxLength": 20
+    },
+    "country": {
+      "type": "string",
+      "description": "Country name or code",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "coordinates": {
+      "type": "object",
+      "description": "Geographic coordinates",
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
+      }
+    }
+  }
+}
