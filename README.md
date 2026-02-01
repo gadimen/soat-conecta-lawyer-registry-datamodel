@@ -1,0 +1,1 @@
+# soat-conecta-lawyer-registry-datamodel
